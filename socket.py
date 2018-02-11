@@ -29,7 +29,7 @@ class AsyncSocketServer(asyncore.dispatcher):
 
     def get_data(self):
         self._new_data = False
-        return self._data
+        return [self._new_data, self._data]
 
 
 class AsyncSocketClient(asyncore.dispatcher):
